@@ -1,0 +1,37 @@
+workflow_get_inputs_resp_elem:
+  - read:
+      path: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages/{name}/_input
+      method: GET
+
+workflow_input_data:
+  - update:
+      path: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages/{name}/_input
+      method: PUT
+
+com.nokia.eda.os.v1.deploy_image:
+  - create:
+      path: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages
+      method: POST
+  - read:
+      path: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages/{name}
+      method: GET
+
+com.nokia.eda.os.v1.deploy_image_list:
+  - read:
+      path: /workflows/v1/os.eda.nokia.com/v1/deployimages
+      method: GET
+  - read:
+      path: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages
+      method: GET
+
+totalPaths: 8
+totalSchemas: 10
+usedSchemas: 4
+unusedSchemas: 6
+unusedSchemaList:
+  - ErrorResponse
+  - WorkflowIdentifier
+  - WorkflowInputDataElem
+  - com.nokia.eda.os.v1.DeployImage_alarms
+  - com.nokia.eda.os.v1.DeployImage_deviations
+  - com.nokia.eda.os.v1.DeployImage_metadata
