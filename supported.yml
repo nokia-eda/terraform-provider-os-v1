@@ -1,0 +1,19 @@
+datasources:
+  - model_name: deploy_image_list
+    oas_endpoint: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages
+    oas_schema: com.nokia.eda.os.v1.DeployImageList
+  - model_name: deploy_image
+    oas_endpoint: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages/{name}
+    oas_schema: com.nokia.eda.os.v1.DeployImage
+  - model_name: workflow_get_inputs_resp_elem
+    oas_endpoint: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages/{name}/_input
+    oas_schema: WorkflowGetInputsRespElem
+
+resources:
+  - model_name: deploy_image
+    oas_endpoint: /workflows/v1/os.eda.nokia.com/v1/namespaces/{namespace}/deployimages
+    oas_schema: com.nokia.eda.os.v1.DeployImage
+
+qualified:
+  datasources:
+  resources:
